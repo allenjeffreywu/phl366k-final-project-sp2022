@@ -1,1 +1,72 @@
-theme: jekyll-theme-cayman
+title: Template Hackathon
+nav_title: Template Hack<span class="hide-very-narrow">athon</span><br><small><span class="hide-very-narrow">with</span> University of Bristol</small>
+
+event_date: 2–4 June 2021
+registration_opens_date: 17 March 2021
+registration_closes_date: 16 April 2021
+
+author: University of Bristol Jean Golding Institute
+mailbox_address: ...@bristol.ac.uk
+
+description:
+  The Template Hackathon is a X-day hackathon event, organised by the University
+  of Bristol’s Jean Golding Institute. Over the course of the event, teams of
+  researchers will...
+
+url: "https://jean-golding-institute.github.io/hackathon-template"
+github_repo: jean-golding-institute
+
+theme: minima
+
+# The actual visibility of the nav bar links is influenced by the event_status
+# and registration_status flags below
+header_pages:
+  - registration.md
+  - agenda.md
+  - projects.md
+  - videos-slides.md
+  - resources.md
+  - about.md
+
+# Event status
+#   soon = event is yet to happen
+#    now = event is currently happening
+#   over = event has happened
+#  (demo = show all pages to demonstrate the template)
+event_status: demo
+
+# Open and close the registration form
+#   soon = Registration has not yet opened
+#   open = Registration form is open
+# closed = Registration form is now closed
+#  (demo = show all pages to demonstrate the template)
+registration_status: demo
+
+# Remove ".html" from default permalinks
+permalink: pretty
+
+# (See default layout below)
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Social media links
+# (See default layout below)
+twitter:
+  card: summary_large_image
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/advert.png
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Simplify tables of contents
+kramdown:
+  toc_levels: "2,3"

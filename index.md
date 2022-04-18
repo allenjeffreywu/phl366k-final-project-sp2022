@@ -1,37 +1,88 @@
-## Welcome to GitHub Pages
+---
+layout: page
+title: Template Hackathon
+menu_title: Home
+menu_icon: house-door
+---
 
-You can use the [editor on GitHub](https://github.com/allenjeffreywu/phl366k-final-project-sp2022/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+{:.secondary}
+# {{ site.event_date }}, in association with the University of Bristol
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<!-- REMOVE THIS SECTION when you use this template -->
+<div class="lead" markdown="1">
+This is a demo of the template repository for a public-facing hackathon website,
+built by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/) at the
+University of Bristol.
 
-### Markdown
+For more information: view the [README](https://github.com/jean-golding-institute/hackathon-template/blob/main/README.md) 
+or the [GitHub repository](https://github.com/jean-golding-institute/hackathon-template).
+</div>
+<!-- END of section to remove -->
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<div class="aside">
+    <h2><i class="bi bi-calendar3"></i> Event timeline</h2>
+    <dl>
+        {% if site.registration_status == "soon" or site.registration_status == "open" or site.registration_status == "demo" %}
+            <dt>{{ site.registration_opens_date }}</dt>
+            <dd>
+                Applications open for participants<br>
+                {% if site.registration_status == 'open' %}
+                    <a href="{{ site.baseurl }}{% link registration.md %}" class="btn">Register now</a>
+                {% elsif site.registration_status == 'closed' %}
+                    <a class="btn disabled">Registration has closed</a>
+                {% elsif site.registration_status == 'soon' %}
+                    <a class="btn disabled">Registration opens soon</a>
+                {% endif %}
+            </dd>
+        {% endif %}
 
-```markdown
-Syntax highlighted code block
+        <dt>{{ site.registration_closes_date }}</dt>
+        <dd>Applications close</dd>
 
-# Header 1
-## Header 2
-### Header 3
+        <dt>{{ site.event_date }}</dt>
+        <dd>Hackathon date</dd>
+    </dl>
+</div>
 
-- Bulleted
-- List
+{% if site.event_status != "over" %}
 
-1. Numbered
-2. List
+Scientists from the University of Bristol are hosting a X-day hackathon on
+{{ site.event_date }}, open to researchers, to...
 
-**Bold** and _Italic_ and `Code` text
+Researchers can sign up to [topics ranging from]({{ site.baseurl }}{% link projects.md %})
+... to ..., and more. Teams will be led by senior academics from a range of
+disciplines at the University of Bristol, but participating researchers can be
+from any UK academic institution. [This opportunity]({{ site.baseurl }}{% link registration.md %})
+is open to early career researchers[<sup>(?)</sup>][faq]{:title="What do we mean by an Early Career Researcher (ECR)?"}.
 
-[Link](url) and ![Image](src)
-```
+Participation is open to **researchers from any UK academic institution**, and
+we encourage contributions from **early career researchers**[<sup>(?)</sup>][faq]{:title="What do we mean by an Early Career Researcher (ECR)?"},
+including PhDs and Postdocs.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Logistics
 
-### Jekyll Themes
+The event will take place virtually, using a combination of **video
+conferencing** (Zoom) for meetings and seminars, and **discussion forums**
+(Slack) for ongoing comms. Data holding and analysis will take place on...
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/allenjeffreywu/phl366k-final-project-sp2022/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Outputs
 
-### Support or Contact
+By the end of the event, we hope to...
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[faq]: {{ site.baseurl }}{% link faq.md %}
+
+{% else %}
+
+Scientists from the University of Bristol hosted a X-day hackathon on
+{{ site.event_date }}, open to researchers, to...
+
+Researchers could sign up to [topics ranging from]({{ site.baseurl }}{% link projects.md %})
+... to ..., and more. Teams were be led by senior academics from a range of
+disciplines at the University of Bristol, but participating researchers could be
+from any UK academic institution.
+
+The event took place virtually, using a combination of **video conferencing**
+(Zoom) for meetings and seminars, and **discussion forums** (Slack) for ongoing
+comms. Data holding and analysis took place on...
+
+{% endif %}
