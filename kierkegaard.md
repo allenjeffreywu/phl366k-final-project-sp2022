@@ -1,19 +1,12 @@
 ---
-title: Hackathon registration
-menu_title: Registration
-menu_icon: clipboard-check
-event_status:
- - soon
+title: Kierkegaard
+menu_title: Kierkegaard
+menu_icon: clock
 ---
 
 {:.lead}
-Participation is open to researchers from any UK academic institution,
-and we encourage contributions from early career
-researchers[<sup>(?)</sup>][faq]{:title="What do we mean by an Early Career
-Researcher (ECR)?"}, including PhDs and Postdocs. {% if site.registration_status
-== "soon" or site.registration_status == "demo" %}Registration opens on
-{{ site.registration_opens_date }}.{% endif %} The closing date for applications
-is {{ site.registration_closes_date }}.
+Take this quiz to see which philosophy best fits you![<sup>(?)</sup>][faq]{:title="What do we mean by an Early Career
+Researcher (ECR)?"}
 
 <div class="aside" markdown="1">
 This virtual event will require some commitment prior to and including the
@@ -59,5 +52,4 @@ residing in UK academic institutions.
 The closing date for the applications is {{ site.registration_closes_date }}. If
 you have any queries, or have any difficulties completing the registration form,
 please email our dedicated mailbox: <{{ site.mailbox_address }}>.
-
 [faq]: {{ site.baseurl }}{% link faq.md %}

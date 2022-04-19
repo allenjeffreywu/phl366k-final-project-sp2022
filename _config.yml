@@ -21,12 +21,12 @@ theme: minima
 # The actual visibility of the nav bar links is influenced by the event_status
 # and registration_status flags below
 header_pages:
-  - registration.md
-  - agenda.md
-  - projects.md
-  - videos-slides.md
-  - resources.md
-  - about.md
+  - kierkegaard.md
+  - nietzsche.md
+  - heidegger.md
+  - sartre.md
+  - beauvoir.md
+  - camus.md
 
 # Event status
 #   soon = event is yet to happen
