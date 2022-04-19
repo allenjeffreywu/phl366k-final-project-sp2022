@@ -75,11 +75,11 @@ We have tried to put as many of the common site settings and variables in `_conf
 
 * `nav_title`: The name and strapline of the site used in the top nav, with optional `<span>` tags allowing for parts of it to be hidden when viewing on a mobile phone
 
-* `event_date`: The date(s) of your event, displayed in various places around the site
+* `DELETE`: The date(s) of your event, displayed in various places around the site
 
 * `registration_opens_date`: As above, but the date registration opens (this doesn't control when the form is actually diaplayed – see below for how to do this)
 
-* `registration_closes_date`: As above, but the date registration closes
+* `DELETE`: As above, but the date registration closes
 
 * `author`: The organising institution
 
@@ -99,7 +99,7 @@ As the event organisation progresses, you will want to show different content on
 
 #### Other things to change
 
-* The content of the individual pages (`index.md`, `agenda.md`, for example), as not everything will be covered by the configuration file
+* The content of the individual pages (`index.md`, `index.md`, for example), as not everything will be covered by the configuration file
 
 * `assets/logo.png`: The logo displayed on the top nav bar
 
@@ -114,7 +114,7 @@ As the event organisation progresses, you will want to show different content on
 
 * Use [Liquid variables](https://jekyllrb.com/docs/variables/) to refer to variables set in `_config.yml` or the [front matter](https://jekyllrb.com/docs/front-matter/) of a page, for example:
 
-      {{ site.event_date }}
+      {{ site.DELETE }}
 
 * Use the [Liquid link tag](https://jekyllrb.com/docs/liquid/tags/#links) to link to other pages using their Markdown filename, for example:
 

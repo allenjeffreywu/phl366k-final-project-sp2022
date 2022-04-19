@@ -44,7 +44,7 @@ Actions required:
    which is a summary of the key points covered during the briefing presentation
    * You can also view a [copy of the slides]({{ site.baseurl }}{% link resources/participant-briefing.html %})
      or **[recording of the briefing]**
-   * We also recommend you look at the [other resources and tutorial notebooks]({{ site.baseurl }}{% link resources.md %})
+   * We also recommend you look at the [other resources and tutorial notebooks]({{ site.baseurl }}{% link index.md %})
 
 If you have any questions or issues, you can use the #help channel on Slack, or email us on
 cmip6moap-hackathonevent2021@bristol.ac.uk.

@@ -72,9 +72,9 @@ layout: resource
 > * Project lead briefing – [slides]({{ site.baseurl }}{% link resources/project-lead-briefing.html %}) and **recording**
 > * [Participant guide]({{ site.baseurl }}{% link resources/participant-guide.md %}) – more detail on all the points discussed during the presentation
 > * [Creating an account on JASMIN]({{ site.baseurl }}{% link resources/creating-jasmin-account.md %}) and [checking you have the right level of access]({{ site.baseurl }}{% link resources/creating-jasmin-account.md %}#getting-access-to-the-right-services)
-> * [Project abstracts]({{ site.baseurl }}{% link projects.md %})
-> * [Hackathon agenda]({{ site.baseurl }}{% link agenda.md %})
-> * [Resources & tutorials]({{ site.baseurl }}{% link resources.md %})
+> * [Project abstracts]({{ site.baseurl }}{% link index.md %})
+> * [Hackathon agenda]({{ site.baseurl }}{% link index.md %})
+> * [Resources & tutorials]({{ site.baseurl }}{% link index.md %})
 > * [CEDA Archive](https://data.ceda.ac.uk/) & guides to [finding]({{ site.baseurl }}{% link resources/finding-cmip6-data.md %}) and [loading]({{ site.baseurl }}{% link resources/loading-data-xarray.md %}) data
 >
 > Example Jupyter notebooks

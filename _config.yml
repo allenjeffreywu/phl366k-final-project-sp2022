@@ -1,17 +1,11 @@
-title: Template Hackathon
-nav_title: Template Hack<span class="hide-very-narrow">athon</span><br><small><span class="hide-very-narrow">with</span> University of Bristol</small>
+title: Existentialism
+nav_title: Existential<span class="hide-very-narrow">ism</span><br><small><span class="hide-very-narrow">with</span> University of Texas</small>
 
-event_date: 2–4 June 2021
-registration_opens_date: 17 March 2021
-registration_closes_date: 16 April 2021
-
-author: University of Bristol Jean Golding Institute
+author: University of Texas at Austin
 mailbox_address: ...@bristol.ac.uk
 
 description:
-  The Template Hackathon is a X-day hackathon event, organised by the University
-  of Bristol’s Jean Golding Institute. Over the course of the event, teams of
-  researchers will...
+  A student website to promote Existentialism
 
 url: "https://jean-golding-institute.github.io/hackathon-template"
 github_repo: jean-golding-institute

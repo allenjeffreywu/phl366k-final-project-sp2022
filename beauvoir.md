@@ -4,53 +4,14 @@ menu_title: Beauvoir
 menu_icon: clipboard-check
 ---
 
-{:.lead}
-Take this quiz to see which philosophy best fits you![<sup>(?)</sup>][faq]{:title="What do we mean by an Early Career
-Researcher (ECR)?"}
+## Beauvoir
 
-<div class="aside" markdown="1">
-This virtual event will require some commitment prior to and including the
-Hackathon Event which will take part from {{ site.event_date }}.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Adipiscing commodo elit at imperdiet dui accumsan. Imperdiet sed euismod nisi porta lorem mollis aliquam. Consequat id porta nibh venenatis cras. Arcu risus quis varius quam quisque. Magna eget est lorem ipsum dolor. Mollis nunc sed id semper risus. Leo vel orci porta non pulvinar. Metus dictum at tempor commodo ullamcorper a lacus. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Urna molestie at elementum eu facilisis.
 
-{% if site.registration_status == "soon" or site.registration_status == "demo" %}
-  <a class="btn disabled">Registration opens soon</a>
-{% endif %}
-{% if site.registration_status == "open" or site.registration_status == "demo" %}
-  [Complete the application form](https://forms.office.com/...){:.btn target="_blank"}
-{% endif %}
-{% if site.registration_status == "closed" or site.registration_status == "demo" %}
-  <a class="btn disabled">Registration has closed</a>
-{% endif %}
+Facilisis volutpat est velit egestas dui. Urna molestie at elementum eu facilisis. Et ultrices neque ornare aenean. Dapibus ultrices in iaculis nunc sed. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. Tortor vitae purus faucibus ornare suspendisse sed. Elit scelerisque mauris pellentesque pulvinar pellentesque. Consequat nisl vel pretium lectus quam id. Felis eget nunc lobortis mattis. Mattis aliquam faucibus purus in massa. Fermentum leo vel orci porta non pulvinar. Imperdiet dui accumsan sit amet. A diam maecenas sed enim ut sem viverra. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
 
-The closing date for applications is {{ site.registration_closes_date }}.
-</div>
+Eu mi bibendum neque egestas congue quisque. Et netus et malesuada fames ac turpis egestas integer. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Vestibulum morbi blandit cursus risus at. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Et malesuada fames ac turpis. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Et tortor at risus viverra adipiscing at in tellus. Sit amet justo donec enim.
 
-We are looking for enthusiastic and dedicated researchers who already have
-experience with analysing ... data, and who are keen to experience working with
-different scientists and institutes, and perhaps on topics not immediately in
-their area. We also intend that early career researchers[<sup>(?)</sup>][faq]{:title="What do we mean by an Early Career Researcher (ECR)?"},
-will build strong relationships with their peers from other institutes. 
+Vitae aliquet nec ullamcorper sit amet. Morbi tristique senectus et netus et malesuada fames. Nec nam aliquam sem et tortor consequat id porta. Tristique magna sit amet purus gravida. Quis commodo odio aenean sed adipiscing diam. Id velit ut tortor pretium viverra suspendisse. Sapien et ligula ullamcorper malesuada proin. Est placerat in egestas erat imperdiet sed euismod. Vitae congue eu consequat ac felis donec et odio. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Consequat id porta nibh venenatis cras sed felis.
 
-This virtual event will require approximately two hours commitment prior to the
-hackathon, and then X days commitment during the event, which will take part
-from **{{ site.event_date }}**. Technical support and guidance will be provided
-by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/) at the
-University of Bristol, but we expect all applicants to have prior knowledge of
-scientific programming.
-
-We will supply each researcher with a temporary hackathon account on ..., which
-will give then access to a Python&nbsp;3 notebook environment and a variety of
-relevant datasets, for which we can provide technical support and guidance.
-Researchers may be able to use other programming languages and tools, however we
-will only be able to provide limited support for these.
-
-If you are interested in applying and having the opportunity to engage with
-like-minded scientists, then please complete the application form by clicking
-the link above. Please be aware that this event will only be open to those
-residing in UK academic institutions.
-
-The closing date for the applications is {{ site.registration_closes_date }}. If
-you have any queries, or have any difficulties completing the registration form,
-please email our dedicated mailbox: <{{ site.mailbox_address }}>.
-
-[faq]: {{ site.baseurl }}{% link faq.md %}
+Sed viverra ipsum nunc aliquet bibendum. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vel eros donec ac odio tempor orci dapibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Interdum velit laoreet id donec ultrices tincidunt arcu non. Porttitor leo a diam sollicitudin tempor id eu nisl. Nunc mattis enim ut tellus. Congue mauris rhoncus aenean vel elit scelerisque. Curabitur gravida arcu ac tortor dignissim convallis. Interdum consectetur libero id faucibus nisl.

@@ -32,9 +32,9 @@ Date              | Action
                   | Ensure project leads have [created a JASMIN account]({{ site.baseurl }}{% link resources/creating-jasmin-account.md %})
                   | Send calendar invites for pre-hackathon meetings and hackathon to project leads and participants
 ---               | ---                  
-2 weeks before    | Finalise [example notebooks / repositories]({{ site.baseurl }}{% link resources.md %})
+2 weeks before    | Finalise [example notebooks / repositories]({{ site.baseurl }}{% link index.md %})
                   | Ensure that [a Group Workspace has been created]({{ site.baseurl }}{% link resources/creating-jasmin-account.md %}#ensuring-you-have-access-to-the-hackathon-group-workspace) for the hackathon
-                  | Hold pre-hackathon meetings with project leads (1 hour) and participants (1.5 hours), outlining [how the hackathon will run]({{ site.baseurl }}{% link resources/participant-guide.md %}) and the [hackathon agenda]({{ site.baseurl }}{% link agenda.md %})
+                  | Hold pre-hackathon meetings with project leads (1 hour) and participants (1.5 hours), outlining [how the hackathon will run]({{ site.baseurl }}{% link resources/participant-guide.md %}) and the [hackathon agenda]({{ site.baseurl }}{% link index.md %})
                   | Create recurring Zoom meeting for hackathon, with pre-allocated breakout rooms for projects, ensuring participants are muted on entry, can connect without host present and can move freely between breakout rooms
                   | Create [Slack workspace]({{ site.baseurl }}{% link resources/templates/slack-workspace.md %}), with channels for each project
                   | Create GitHub repository for each project, using [template repository](https://github.com/cmip6moap/project-template)
