@@ -1,55 +1,219 @@
 ---
 layout: page
-title: Philosophy quiz
+title: Existentialism Quiz
 menu_title: Quiz
 menu_icon: house-door
 ---
 
-## PHILOSOPHY
+<p>
+    This is a quiz to evaluate which existential philosopher shares the same interests as you!
+</p>
 
-<p>Question 1: I like chocolate.</p>
 
-<input type="radio" name="q1" value="5">Very much like me
-<input type="radio" name="q1" value="4">Mostly like me
-<input type="radio" name="q1" value="3">Somewhat like me
-<input type="radio" name="q1" value="2">Not much like me
-<input type="radio" name="q1" value="1">Not like me at all
-
-    
-<button type="button" onclick="displayRadioValue()">
-    Submit
-</button>
-    
-    
+<div id="quiz"></div>
+<br>
+<button id="button">Submit</button>
 <div id="result"></div>
     
 <script>
-    const weights = new Map([["5", 1], ["4",0.5], ["3", 0], ["2", -0.5], ["1", -1]])
-    const philScores = new Map([["beauvoir", 0], ["camus", 0], ["heidegger", 0], ["kierkegaard", 0], ["sarte", 0]])
-    // for loop to iterate through question numbers (append q + #) to create radio buttons
-    // mapping of question to philosophers
-    // questions should associate themselves in a map with philsophers - pos neg values means that different portions of the array are applied
-    // {Question : [[left group] [right group]]} - can be inversed, we add the value to the right group, we subtract the value from the left group
-    // function call should be made to make these additions/subtractions O(1) time
-    function displayRadioValue() {
-        var ele = document.getElementsByName('q1');
-            
-        for(i = 0; i < ele.length; i++) {
-            if(ele[i].checked)
-            document.getElementById("result").innerHTML
-                    = "Question 1: "+weights.get(ele[i].value);
+    // modified code from: https://stackoverflow.com/questions/54635773/javascript-quiz-get-selected-radio-button-value-and-compare-to-correct-answer
+    // overall website stolen from: https://github.com/Jean-Golding-Institute/hackathon-template
+    var answers = ['Very much like me', 'Mostly like me', 'Somewhat like me', 'Not much like me', 'Not like me at all']
+    
+    const weights = new Map([['Very much like me', 1], ['Mostly like me',0.5], ['Somewhat like me', 0], ['Not much like me', -0.5], ['Not like me at all', -1]])
+    var philScores = new Map([["beauvoir", 0], ["camus", 0], ["heidegger", 0], ["kierkegaard", 0], ["nietzsche", 0], ["sartre", 0]])
+    
+    var myQuestions = {
+    q1: { // unique id for every question
+        question: 'It comforts you to believe that God does not exist',
+        agreePhil: ["nietzsche", "sartre"],
+        disagreePhil: ["kierkegaard"],
+    },
+    q2: {
+        question: 'You enjoy stories rather than complex theoretical pieces',
+        agreePhil: ["camus", "beauvoir", "kierkegaard"],
+        disagreePhil: ["heidegger", "nietzsche"],
+    },
+    q3: {
+        question: 'You’d rather live an exciting, fast-paced life and die young than live comfortably to an old age.',
+        agreePhil: ["Heidegger"],
+        disagreePhil: ["kierkegaard", "camus"],
+    },
+    q4: {
+        question: 'You believe that the world should function in a way that ensures just outcomes, whenever possible',
+        agreePhil: ["beauvoir"],
+        disagreePhil: ["nietzsche", "camus"],
+    },
+    q5: {
+        question: 'You believe that we have a responsibility to freely act to protect the freedom of others',
+        agreePhil: ["beauvoir", "camus", "sartre"],
+        disagreePhil: ["nietzsche"],
+    },
+    q6: {
+        question: 'You feel that, sometimes, ethical principles can be overruled by divine intervention',
+        agreePhil: ["kierkegaard"],
+        disagreePhil: ["beauvoir", "nietzsche", "sartre"],
+    },
+    q7: {
+        question: 'You believe that humans have both consciousness and a self',
+        agreePhil: ["camus", "sartre"],
+        disagreePhil: ["heidegger", "kierkegaard"],
+    },
+    q8: {
+        question: 'You\’re the life of the party',
+        agreePhil: ["beauvoir", "camus"],
+        disagreePhil: ["nietzsche", "sartre"],
+    },
+    q9: {
+        question: 'You\’re willing to go to extreme lengths to see your goals accomplished',
+        agreePhil: ["sartre"],
+        disagreePhil: ["beauvoir", "camus"],
+    },
+    q10: {
+        question: 'You believe that rules are important and should always be followed',
+        agreePhil: ["kierkegaard"],
+        disagreePhil: ["camus", "nietzsche"],
+    },
+    q11: {
+        question: 'You are a person of principle: when you find a suitable guiding philosophy, you tend to do everything you can to live by it',
+        agreePhil: ["kierkegaard"],
+        disagreePhil: ["heidegger"],
+    },
+    q12: {
+        question: 'Whenever possible, you try to make definite choices rather than \“go with the flow.\”',
+        agreePhil: ["kierkegaard", "sartre"],
+        disagreePhil: ["camus", "heidegger"],
+    },
+    q13: {
+        question: 'You find that people give too much credence to arbitrary labels placed on them, either by themselves or by others',
+        agreePhil: ["camus", "sartre"],
+        disagreePhil: ["kierkegaard", "nietzsche"],
+    },
+    q14: {
+        question: 'You value power, and, whenever possible, will go to great lengths to obtain it',
+        agreePhil: ["camus", "nietzsche"],
+        disagreePhil: [],
+    },
+    q15: {
+        question: 'You don\’t think existence should be studied; it should be experienced',
+        agreePhil: ["camus", "heidegger"],
+        disagreePhil: ["kierkegaard", "sartre"],
+    },
+    q16: {
+        question: 'You believe we still have a long way to go in achieving equality of the sexes',
+        agreePhil: ["beauvoir", "sartre"],
+        disagreePhil: ["heidegger", "nietzsche"],
+    },
+    q17: {
+        question: 'You are attracted to other people and make new friends easily',
+        agreePhil: ["beauvoir", "camus"],
+        disagreePhil: ["kierkegaard", "nietzsche"],
+    },
+    q18: {
+        question: 'Doing the right thing is your most important value',
+        agreePhil: ["beauvoir", "kierkegaard"],
+        disagreePhil: ["camus", "nietzsche"],
+    },
+    q19: {
+        question: 'You find your purpose by putting faith in something larger than yourself, such as a God or some other spiritual principle',
+        agreePhil: ["kierkegaard"],
+        disagreePhil: ["camus", "sartre"],
+    },
+    q20: {
+        question: 'You take stock of your life by looking at all that you can still accomplish, rather than all that your past achievements',
+        agreePhil: ["nietzsche", "sartre"],
+        disagreePhil: ["kierkegaard", "heidegger"],
+    },
+};
+
+/*********************************************************************/
+
+var quiz_id = document.getElementById('quiz');
+var submitButton = document.getElementById('button');
+var userAnswers = {}; // store the selected answers in this object, indexed by question id
+
+/*********************************************************************/
+
+var aQuestion;
+Object.keys(myQuestions).forEach((questionId, arrayIndex) => {
+    aQuestion = myQuestions[questionId];
+    var questionContainer = document.createElement('div');
+    var questionLabel = document.createElement('label');
+    var optionContainer = document.createElement('section');
+    
+    answers.forEach((answer) => {
+        var radioButton = generateRadioButton(questionId, answer);
+        optionContainer.appendChild(radioButton);
+    });
+
+    questionLabel.innerText = `\n${arrayIndex + 1}. ${aQuestion.question}\n`;
+
+    questionContainer.appendChild(questionLabel);
+    questionContainer.appendChild(optionContainer);
+    quiz_id.appendChild(questionContainer);
+});
+
+/*********************************************************************/
+
+function getWeight(answer) {
+    return weights.get(answer);
+}
+
+function showResults(params) {
+    // Do your things
+    // console.log(userAnswers);
+    Object.keys(myQuestions).forEach((questionId, arrayIndex) => {
+        aQuestion = myQuestions[questionId];
+        aQuestion.agreePhil.forEach((phil) => {
+            philScores.set(phil, philScores.get(phil) + getWeight(userAnswers[questionId]))
+        });
+
+        aQuestion.disagreePhil.forEach((phil) => {
+            philScores.set(phil, philScores.get(phil) - getWeight(userAnswers[questionId]))
+        });
+    });
+
+    // find max score
+    var maxphil = "camus"
+    philScores.forEach((score, phil) => {
+        if (score > philScores.get(maxphil)) {
+            maxphil = phil;
         }
-    }
+        //var resultContainer = document.createElement('label');
+        //resultContainer.innerText = `${phil}. ${score}\n`;
+        //quiz_id.appendChild(resultContainer);
+    });
+
+    window.location.replace(maxphil);
+}
+
+/*********************************************************************/
+
+submitButton.addEventListener('click', showResults);
+
+/*********************************************************************/
+
+function generateRadioButton(groupId, value) {
+    var container = document.createElement('div');
+    var label = document.createElement('label');
+    var radioButton = document.createElement('input');
+
+    radioButton.className = 'answers';
+    radioButton.type = 'radio';
+    radioButton.id = groupId;
+    radioButton.value = value;
+    radioButton.name = groupId;
+    radioButton.addEventListener('input', (event) => {
+        userAnswers[groupId] = event.currentTarget.value;
+    });
+
+    label.innerText = value;
+    label.htmlFor = value;
+
+    container.appendChild(radioButton);
+    container.appendChild(label);
+
+    return container;
+}
+
 </script>
-
-<br>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Adipiscing commodo elit at imperdiet dui accumsan. Imperdiet sed euismod nisi porta lorem mollis aliquam. Consequat id porta nibh venenatis cras. Arcu risus quis varius quam quisque. Magna eget est lorem ipsum dolor. Mollis nunc sed id semper risus. Leo vel orci porta non pulvinar. Metus dictum at tempor commodo ullamcorper a lacus. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Urna molestie at elementum eu facilisis.
-
-Facilisis volutpat est velit egestas dui. Urna molestie at elementum eu facilisis. Et ultrices neque ornare aenean. Dapibus ultrices in iaculis nunc sed. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. Tortor vitae purus faucibus ornare suspendisse sed. Elit scelerisque mauris pellentesque pulvinar pellentesque. Consequat nisl vel pretium lectus quam id. Felis eget nunc lobortis mattis. Mattis aliquam faucibus purus in massa. Fermentum leo vel orci porta non pulvinar. Imperdiet dui accumsan sit amet. A diam maecenas sed enim ut sem viverra. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
-
-Eu mi bibendum neque egestas congue quisque. Et netus et malesuada fames ac turpis egestas integer. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Vestibulum morbi blandit cursus risus at. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Et malesuada fames ac turpis. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Et tortor at risus viverra adipiscing at in tellus. Sit amet justo donec enim.
-
-Vitae aliquet nec ullamcorper sit amet. Morbi tristique senectus et netus et malesuada fames. Nec nam aliquam sem et tortor consequat id porta. Tristique magna sit amet purus gravida. Quis commodo odio aenean sed adipiscing diam. Id velit ut tortor pretium viverra suspendisse. Sapien et ligula ullamcorper malesuada proin. Est placerat in egestas erat imperdiet sed euismod. Vitae congue eu consequat ac felis donec et odio. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Consequat id porta nibh venenatis cras sed felis.
-
-Sed viverra ipsum nunc aliquet bibendum. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vel eros donec ac odio tempor orci dapibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Interdum velit laoreet id donec ultrices tincidunt arcu non. Porttitor leo a diam sollicitudin tempor id eu nisl. Nunc mattis enim ut tellus. Congue mauris rhoncus aenean vel elit scelerisque. Curabitur gravida arcu ac tortor dignissim convallis. Interdum consectetur libero id faucibus nisl.
